@@ -1,0 +1,15 @@
+{
+    "header": {
+        "requestUUId": "0022506031191036",
+        "serviceRequestVersion": "1.0",
+        "serviceRequestId": "COMVIVAAGENTTRANINQ",
+        "serviceName": "Inquiry",
+        "channelId": "BRANCH",
+        "billerId": "COMVIVAAGENT",
+        "messageDateTime": "{{$isoTimestamp}}",
+        "countryCode": "MW"
+    },
+    "data": {
+        "referenceNumber": "0202507091010004"
+    }
+}
