@@ -1,5 +1,13 @@
 # GHII Technical Challege
 
+## Prerequisites
+
+```json
+"nodejs": v20.18.1  //node js
+"npx" : 9.2.0       //nodejs cli tool
+"tsc": 5.8.3        // Typescript compiler
+```
+
 ## Installation
 
 ```bash
@@ -35,6 +43,8 @@ npx tsc
 ```bash
 npx tsx dist/main.js
 ```
+
+`Note`: The visualization graph is saved in the [visualization folder](./Visualization/) by default.
 
 ---
 
