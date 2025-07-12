@@ -9,13 +9,18 @@ export class DataService implements IDataService {
     constructor() {
         this.fileReader = new FileReaderService();
     }
+
+    // Fetch nodes from JSON file
     async getNodes(): Promise<Node[]> {
         const fileContent = await this.fileReader.ReadFileAsync('./_data/nodes.json');
-        return JSON.parse(fileContent);
+        const nodeData = JSON.parse(fileContent) as { nodes: { id: string, x: number, y: number }[]};
+        return nodeData.nodes.map(node => ({ Id: node.id, X: node.x, Y: node.y }));
     }
 
+    // Fetch edges from JSON file
     async getEdges(): Promise<Edge[]> {
         const fileContent = await this.fileReader.ReadFileAsync('./_data/edges.json');
-        return JSON.parse(fileContent);
+        const edgeData = JSON.parse(fileContent) as { edges: string[][] };
+        return edgeData.edges.map(edge => ({ StartNode: edge[0], EndNode: edge[1] }));
     }
 }
