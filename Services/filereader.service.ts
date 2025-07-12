@@ -3,6 +3,7 @@ import * as fs from 'fs/promises';
 
 export class FileReaderService implements IFileReaderService {
 
+    //Reads file from disk
     async ReadFileAsync(filePath: string): Promise<string> {
         try {
             const fileContent = await fs.readFile(filePath, 'utf-8');
